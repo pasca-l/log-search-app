@@ -10,6 +10,7 @@ permissions:
 
 env:
   app_root: ./app
+  repo_name: ${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}
 
 jobs:
   deploy:
@@ -32,7 +33,7 @@ jobs:
       - name: build for web
         working-directory: ${{ env.app_root }}
         run: |
-          flutter build web
+          flutter build web --base-href /${{ repo_name }}/
 
       - name: deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
