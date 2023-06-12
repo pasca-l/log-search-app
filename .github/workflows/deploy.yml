@@ -33,7 +33,7 @@ jobs:
       - name: build for web
         working-directory: ${{ env.app_root }}
         run: |
-          flutter build web --base-href /${{ repo_name }}/
+          flutter build web --base-href /${{ env.repo_name }}/
 
       - name: deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
