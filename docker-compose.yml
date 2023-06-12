@@ -2,14 +2,13 @@ version: '3'
 
 services:
   app:
-    container_name: ${APP_CONTAINER_NAME}
     build: .
     volumes:
       - ./app/:/home/local/
-    # ports:
-    #   - "8888:8888"
     stdin_open: true
     tty: true
+    # ports:
+    #   - "8888:8888"
     # command: >
     #   sh -c '
     #     flutter pub get &&

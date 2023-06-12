@@ -2,16 +2,11 @@
 
 
 ## Developing
-1. Start docker container at repository root.
+0. Install `Dev Container` VSCode extension, and "reopen in container". Docker container should be built beforehand, to take have access to the log.
+
+1. Run flutter app inside the `Dev Container`
 ```bash
 $ make start
-```
-
-2. Install `Dev Container` VSCode extension, and "reopen in container".
-
-3. Run flutter app inside the `Dev Container`
-```bash
-$ flutter run -d web-server
 ```
 
 
