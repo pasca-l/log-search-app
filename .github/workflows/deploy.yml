@@ -18,12 +18,13 @@ jobs:
           channel: "stable"
 
       - name: install packages and test app
+        working-directory: ./app
         run: |
-          cd app
           flutter pub get
           flutter test
 
       - name: build for web
+        working-directory: ./app
         run: |
           flutter build web
 
