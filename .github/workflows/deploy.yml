@@ -12,13 +12,14 @@ jobs:
       - name: checkout for workflow to access repository
         uses: actions/checkout@v3
 
-      - name:
+      - name: get flutter sdk
         uses: subosito/flutter-action@v2
         with:
           channel: "stable"
 
       - name: install packages and test app
         run: |
+          cd app
           flutter pub get
           flutter test
 
