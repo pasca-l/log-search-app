@@ -1,0 +1,33 @@
+name: deploy "Log Search App" flutter project to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout for workflow to access repository
+        uses: actions/checkout@v3
+
+      - name:
+        uses: subosito/flutter-actions@v2
+        with:
+          channel: "stable"
+
+      - name: install packages and test app
+        run: |
+          flutter pub get
+          flutter test
+
+      - name: build for web
+        run: |
+          flutter build web
+
+      - name: deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
