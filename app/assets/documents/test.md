@@ -1,5 +1,5 @@
-# h1 見出し
-## h2 見出し
+# h1 見出しalskdjflkj;elakjlsdkfj;alksdjf;laksdjflkjelskaj;sldkfjalsk
+## h2 見出しalskdjflkj;elakjlsdkfj;alksdjf;laksdjflkjelskaj;sldkfjalsk
 ### h3 見出し
 #### h4 見出し
 ##### h5 見出し
@@ -7,20 +7,16 @@
 
 ---
 
-# 文字
-hello
-<br/>
-world
- 
-**太字**
+# コード
 
-__太字__
+インライン `code`
 
-*斜体のテキスト*
+``` dart
+print("Hello World");
+```
 
-_斜体のテキスト_
-
-~~取り消し線~~
+# URL
+[Google](https://www.google.com)
 
 # ブロッククォート
 
@@ -39,11 +35,20 @@ _斜体のテキスト_
 3. リスト
   1. リスト
   2. リスト
-  
-# コード
 
-インライン `code`
+# 文字
+## 文字サンプル
 
-``` dart
-print("Hello World");
-```
+hello
+</br>
+world
+ 
+**太字**
+
+__太字__
+
+*斜体のテキスト*
+
+_斜体のテキスト_
+
+~~取り消し線~~
