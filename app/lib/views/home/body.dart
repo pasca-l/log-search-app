@@ -17,21 +17,12 @@ class HomeBody extends StatelessWidget {
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.hasData) {
             return SafeArea(
-              child: Markdown(
-                builders: {
-                  'h1': MarkdownH1Builder(),
-                  'h2': MarkdownH2Builder(),
-                  'code': MarkdownCodeBlockBuilder(),
-                },
-                selectable: true,
-                data: snapshot.data,
-              ),
+              child: CustomMarkdown(data: snapshot.data),
             );
           } else if (snapshot.hasError) {
             return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                // crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Icon(
                     Icons.error_outline,
